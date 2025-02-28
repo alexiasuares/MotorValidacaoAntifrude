@@ -39,7 +39,7 @@ Este projeto implementa um motor de validação antifraude para onboarding de cl
 ## ▶ Como Rodar o Projeto  
 1. Clone o repositório  
 ```
-git clone https://github.com/alexiasuares/MotorValidacaoAntifrude.git```
+git clone https://github.com/alexiasuares/MotorValidacaoAntifrude.git
 cd Case
 ```
 
@@ -49,7 +49,7 @@ mvn clean install
 ```
 3. Excute
 ```
-cd motorConfiabilidade```
+cd motorConfiabilidade
 mvn spring-boot:run
 ```
    
