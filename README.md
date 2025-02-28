@@ -1,27 +1,44 @@
-# MotorValidacaoAntifrude
-Este projeto é um protótipo de motor de validação antifraude. Ele verifica dados como nome, CPF, data de nascimento, telefone, e-mail e CEP, atribuindo uma pontuação para cada um e calculando um grau de confiabilidade final.
-📌 Funcionalidades✅ Validação de nome, CPF, data de nascimento, telefone, e-mail e CEP.✅ Gera um grau de confiabilidade com base nas pontuações individuais.✅ Exibe apenas o grau de confiabilidade como resposta da API.✅ Implementado em Java com Spring Boot.
-🛠 Tecnologias UtilizadasJava 17
-Spring Boot
-Maven
-API de consulta de CEP
-📂 Estrutura do Projeto/motorConfiabilidade
-│── src/main/java/com/verificacaoConfiabilidade
-│   ├── controller/ValidacaoController.java
-│   ├── service/VerificacaoService.java
-│   ├── service/ValidaNome.java
-│── pom.xml
-│── README.md🚀 Como Executar o Projeto1️⃣ Clonar o Repositóriogit clone https://github.com/seu-usuario/motorConfiabilidade.git
-cd motorConfiabilidade2️⃣ Construir e Executar o Projetomvn clean install
-mvn spring-boot:runO servidor iniciará em http://localhost:8080.
-🔥 Endpoints da API1️⃣ Cálculo do Grau de ConfiabilidadeURL: /api/validacao/calcular
-Método: POST
-Requisição: JSON com os dados a validar
-🔹 Exemplo de Requisição{
+# Motor de Confiabilidade Antifraude
+
+Este projeto implementa um motor de validação antifraude que analisa e calcula um grau de confiabilidade com base na validação de diferentes dados do usuário.
+
+## 📌 Funcionalidades
+
+- Validação de **CPF**, **telefone**, **nome**, **data de nascimento**, **e-mail**, **nome da mãe** e **CEP**.
+- Cálculo de **grau de confiabilidade** baseado em pontuação de cada dado.
+- API REST para integração com outros sistemas.
+- Integração com API de consulta de CEP.
+- Arquivamento de logs e dados validados.
+
+## 🚀 Tecnologias Utilizadas
+
+- **Java** 
+- **Maven** 
+- **API Externa** para consulta de CEP
+
+
+---
+
+## 📡 Endpoints da API  
+
+### 1️⃣ Validação de Dados  
+
+**📍 Rota:** `POST /api/validar`  
+
+📥 **Request (JSON)**:  
+
+```json
+{
   "nome": "João Silva",
-  "cpf": "12345678909",
+  "cpf": "12345678900",
   "dataNascimento": "1990-05-15",
-  "telefone": "11987654321",
   "email": "joao@email.com",
+  "telefone": "11987654321",
+  "nomeMae": "Maria Silva",
   "cep": "01001000"
-}🔹 Exemplo de Resposta5.57(Apenas o grau de confiabilidade)
+}
+{
+  "grauConfiabilidade": 7.2
+}
+ ##Como rodar o Projeto
+- Clone o repositório
