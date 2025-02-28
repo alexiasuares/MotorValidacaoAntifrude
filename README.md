@@ -42,7 +42,7 @@ Este projeto implementa um motor de validação antifraude para onboarding de cl
     ```cd Case```
 
 2. Compile 
-```mvn clean install```
+mvn clean install```
 
 3. Excute
 ```cd motorConfiabilidade```
