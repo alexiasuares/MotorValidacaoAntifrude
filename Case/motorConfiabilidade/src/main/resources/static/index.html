@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor de Validação Antifraude </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-4">
+    <h2 class="mb-4">Formulário de Validação</h2>
+    
+    <form id="validar-form">
+        <div class="mb-3">
+            <label class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="nome" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">CPF:</label>
+            <input type="text" class="form-control" id="cpf" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Data de Nascimento:</label>
+            <input type="date" class="form-control" id="dataNascimento" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Telefone:</label>
+            <input type="text" class="form-control" id="telefone" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">E-mail:</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nome da Mãe:</label>
+            <input type="text" class="form-control" id="nomeMae" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">CEP:</label>
+            <input type="text" class="form-control" id="cep" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Endereço:</label>
+            <input type="text" class="form-control" id="endereco" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Número:</label>
+            <input type="text" class="form-control" id="numero" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Validar</button>
+    </form>
+
+    <h3 class="mt-4">Resultado:</h3>
+    <pre id="resultado" class="border p-3 bg-light"></pre>
+
+    <script>
+        document.getElementById("validar-form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const dados = {
+                nome: document.getElementById("nome").value,
+                cpf: document.getElementById("cpf").value,
+                dataNascimento: document.getElementById("dataNascimento").value,
+                telefone: document.getElementById("telefone").value,
+                email: document.getElementById("email").value,
+                nomeMae: document.getElementById("nomeMae").value,
+                cep: document.getElementById("cep").value,
+                endereco: document.getElementById("endereco").value,
+                numero: document.getElementById("numero").value
+            };
+
+            try {
+                const resposta = await fetch("http://localhost:8080/api/validar", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(dados)
+                });
+
+                const resultado = await resposta.json();
+                document.getElementById("resultado").textContent = JSON.stringify(resultado, null, 4);
+            } catch (error) {
+                document.getElementById("resultado").textContent = "Erro ao enviar dados.";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+com\verificacaoConfiabilidade\MainApplication.class
+com\verificacaoConfiabilidade\service\VerificacaoService.class
+com\verificacaoConfiabilidade\controller\VerificacaoController.class
+com\verificacaoConfiabilidade\service\ValidaData.class
+com\verificacaoConfiabilidade\service\ValidaEmail.class
+com\verificacaoConfiabilidade\service\ValidaTelefone.class
+com\verificacaoConfiabilidade\service\ValidaNome.class
+com\verificacaoConfiabilidade\config\AppConfig.class
+com\verificacaoConfiabilidade\model\Client.class
+com\verificacaoConfiabilidade\service\ValidaCPF.class
