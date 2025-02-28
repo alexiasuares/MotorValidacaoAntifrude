@@ -12,14 +12,14 @@
     <artifactId>consultadorCep</artifactId>
 
     <dependencies>
-        <!-- Cliente HTTP -->
+
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.13</version>
         </dependency>
 
-        <!-- Spring Boot Web (caso queira expor como API) -->
+       
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -28,7 +28,7 @@
 
     <build>
         <plugins>
-            <!-- Plugin de empacotamento JAR com dependências -->
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
