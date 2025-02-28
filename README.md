@@ -48,5 +48,5 @@ Este projeto implementa um motor de validação antifraude para onboarding de cl
 - cd motorConfiabilidade
 - mvn spring-boot:run
    
-4.Acesse a API em http://localhost:8080/api/validar
+4.Acesse a API em http://localhost:8080
 
