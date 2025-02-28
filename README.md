@@ -1,4 +1,4 @@
-# 🚀 Motor de Confiabilidade Antifraude  
+#  Motor de Confiabilidade Antifraude  
 Este projeto implementa um motor de validação antifraude para onboarding de clientes, calculando um **grau de confiabilidade** com base na validação de múltiplos dados do usuário.  
 
 ## 📌 Funcionalidades  
@@ -38,15 +38,15 @@ Este projeto implementa um motor de validação antifraude para onboarding de cl
 
 ## ▶ Como Rodar o Projeto  
 1. Clone o repositório  
-- git clone https://github.com/alexiasuares/MotorValidacaoAntifrude.git
-- cd Case
-
+```git clone https://github.com/alexiasuares/MotorValidacaoAntifrude.git
+    cd Case
+```
 2. Compile 
-- mvn clean install
+```mvn clean install```
 
 3. Excute
-- cd motorConfiabilidade
-- mvn spring-boot:run
+```cd motorConfiabilidade```
+```mvn spring-boot:run```
    
 4. Acesse a API em http://localhost:8080
 
