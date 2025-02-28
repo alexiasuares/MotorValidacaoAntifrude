@@ -11,7 +11,6 @@ Este projeto implementa um motor de validação antifraude para onboarding de cl
 ## 🛠 Tecnologias Utilizadas  
 - **Java** + **Spring Boot**  
 - **Maven**  
-- **Banco de Dados** 
 - **API Externa** para consulta de CEP  
 
 
