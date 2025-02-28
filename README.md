@@ -6,7 +6,6 @@ Este projeto implementa um motor de validação antifraude para onboarding de cl
 - Cálculo do **grau de confiabilidade** baseado na pontuação dos dados  
 - API REST para integração com outros sistemas  
 - Integração com API de consulta de CEP  
-- Armazenamento de logs e dados validados  
 
 ## 🛠 Tecnologias Utilizadas  
 - **Java** + **Spring Boot**  
